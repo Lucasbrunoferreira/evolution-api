@@ -914,7 +914,7 @@ export class ChannelStartupService {
 		// Se só tem messageContextInfo, não é mídia válida
 		if (
 			Object.keys(msg).length === 1 &&
-			Object.hasOwn(msg, "messageContextInfo")
+			Object.getOwnPropertyDescriptor(msg, "messageContextInfo")
 		) {
 			return false;
 		}
